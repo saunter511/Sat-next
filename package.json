@@ -1,4 +1,4 @@
-{
+{ "homepage":  "https://saunter511.github.io/Sat-next",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
