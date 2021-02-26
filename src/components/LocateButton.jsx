@@ -1,34 +1,38 @@
-import React from "react"
-import styled from 'styled-components';
-import {BiCurrentLocation} from "react-icons/bi"
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
+import { BiCurrentLocation } from "react-icons/bi";
 const LocateContainer = styled.div`
-	display: inline-block;
+  display: inline-block;
 `;
 const Button = styled.button`
-    color: #ED254E;
-	width: 40px;
-    height: 30px;
-    font-size: 20px;
-    border: none;
-    background: #FFF;
-    display: flex;
-	justify-content: center;
-	align-items: center;
+  color: #ed254e;
+  width: 40px;
+  height: 30px;
+  font-size: 20px;
+  border: none;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    &:hover{
-        color: #8D86C9;
-    }
-    
+  &:hover {
+    color: #8d86c9;
+  }
 `;
 
-const LocateButton = (props) => {
-	return (
-		<LocateContainer>
-			<Button  onClick={props.onClick}>
-            <BiCurrentLocation/>
-            </Button>
-		</LocateContainer>
-	);
+const LocateButton = ({ onClick }) => {
+  return (
+    <LocateContainer>
+      <Button onClick={onClick}>
+        <BiCurrentLocation />
+      </Button>
+    </LocateContainer>
+  );
+};
+
+LocateButton.propTypes = {
+  onClick: PropTypes.func,
 };
 
 export default LocateButton;
